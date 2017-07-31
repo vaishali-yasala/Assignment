@@ -1,0 +1,13 @@
+<h2>
+{{heading}}
+</h2>
+<p>Existing users are:</p>
+    <ul>
+     <ul *ngFor="let users of names; let i = index" [ngStyle]="{'color': i%2==0 ? 'red':'blue'}"><br>
+      {{users}}
+      </ul>
+    </ul>
+<button type="button" (click)="toggle()">Show/Hide</button>
+<br>
+<p [ngStyle]="{'visibility':getvisibility()}">Some more user information.</p>
+
